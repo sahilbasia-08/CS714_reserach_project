@@ -12,6 +12,12 @@
 
 ## Summary of Findings
 
-**This survey reveals a diverse landscape of solutions for sender anonymity, each with unique strengths. Systems like Tor and LiLAC leverage Onion Routing for low-latency anonymous browsing, while protocols like Riposte and Sabre utilize Multi-Party Computation (MPC) and Distributed Point Functions (DPFs) to provide strong, scalable anonymity for millions of users in bulletin-board models.
-**
+**This survey reveals a diverse landscape of solutions for sender anonymity, each with unique strengths. Systems like Tor and LiLAC leverage Onion Routing for low-latency anonymous browsing, while protocols like Riposte and Sabre utilize Multi-Party Computation (MPC) and Distributed Point Functions (DPFs) to provide strong, scalable anonymity for millions of users in bulletin-board models.**
 **A recurring challenge is the trade-off between privacy, performance, and scalability. While DC-nets (used in Spectrum) offer strong theoretical anonymity, they often face scalability issues. In contrast, systems like Vuvuzela and Stadium employ Differential Privacy to offer provable privacy guarantees at a massive scale, but this often comes at the cost of increased bandwidth and latency. The analysis indicates a trend towards hybrid models that combine multiple cryptographic primitives to balance these competing requirements.**
+
+## How To Cite
+
+`@inproceedings{yourname2024sender,
+  title={A Survey of Sender Anonymity in Messaging and Communication},
+  author={Sahil Basia and Adithya Vadapalli},
+  booktitle={Secure Computation Project Report 2024`
