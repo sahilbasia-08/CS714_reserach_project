@@ -1,0 +1,159 @@
+.messageContainer {
+    display: flex;
+    align-items: flex-end;
+    padding: 4px 5%;
+    margin-top: 2px;
+    gap: 8px;
+}
+
+.justifyStart {
+    justify-content: flex-start;
+}
+
+.justifyEnd {
+    justify-content: flex-end;
+}
+
+.messageBox {
+    background: #F3F3F3;
+    border-radius: 18px;
+    padding: 8px 14px;
+    color: #111;
+    display: inline-flex;
+    flex-direction: column;
+    max-width: 80%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.messageText {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.45;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+.messageText img {
+    vertical-align: middle;
+}
+
+.metaRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #6b7280;
+    /* gray-500 */
+}
+
+.metaId {
+    user-select: text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 46ch;
+}
+
+.buttonRow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 6px;
+}
+
+.smallBtn {
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 12px;
+    background: #e5e7eb;
+    /* gray-200 */
+    color: #111827;
+    /* gray-900 */
+    cursor: pointer;
+    transition: background .15s ease, transform .05s ease, opacity .15s ease;
+}
+
+.smallBtn:hover {
+    background: #d1d5db;
+}
+
+/* gray-300 */
+.smallBtn:active {
+    transform: translateY(1px);
+}
+
+.smallBtn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+/* sender coloring */
+.backgroundBlue {
+    background: #2979FF;
+    color: #fff;
+}
+
+.backgroundLight {
+    background: #F3F3F3;
+    color: #111;
+}
+
+.colorWhite {
+    color: white;
+}
+
+.colorDark {
+    color: #353535;
+}
+
+.sentText {
+    display: flex;
+    align-items: center;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #828282;
+    letter-spacing: 0.3px;
+    font-size: 12px;
+    margin: 0;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+.pr-10 {
+    padding-right: 10px;
+}
+
+/* textarea styling for edit mode */
+.editArea {
+    width: 100%;
+    min-height: 42px;
+    resize: none;
+    border: none;
+    background: transparent;
+    font: inherit;
+    color: inherit;
+    line-height: 1.45;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* mobile spacing */
+@media (max-width: 480px) {
+    .messageContainer {
+        padding: 4px 12px;
+    }
+
+    .messageBox {
+        max-width: 92%;
+    }
+
+    .metaId {
+        max-width: 32ch;
+    }
+}

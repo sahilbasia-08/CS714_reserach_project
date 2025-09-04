@@ -1,0 +1,20 @@
+.messages {
+    padding: 12px 0;
+    /* a touch more breathing room */
+    overflow: auto;
+    flex: 1 1 auto;
+    background: #ffffff;
+}
+
+/* empty state */
+.emptyState {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #98a1a9;
+    font-size: 0.95rem;
+    padding: 24px 12px;
+    text-align: center;
+}
+
+/* optional: narrow screens get a bit more side padding from child bubbles already */

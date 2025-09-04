@@ -1,0 +1,215 @@
+/* ====== Stage (animated gradient) ====== */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#root {
+    height: 100%;
+}
+
+.joinOuterContainer {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: radial-gradient(1200px 600px at 20% -20%, #2a3cff22, transparent 60%),
+        radial-gradient(1000px 500px at 110% 10%, #ff2a6b22, transparent 60%),
+        #0f1115;
+    position: relative;
+    overflow: hidden;
+}
+
+.joinOuterContainer::before {
+    /* animated aurora wash */
+    content: "";
+    position: absolute;
+    inset: -40%;
+    background: conic-gradient(from 120deg,
+            rgba(41, 121, 255, .08),
+            rgba(255, 42, 107, .08),
+            rgba(41, 121, 255, .08));
+    filter: blur(80px);
+    animation: swirl 16s linear infinite;
+}
+
+@keyframes swirl {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+/* ====== Card (glass) ====== */
+.joinInnerContainer {
+    position: relative;
+    width: min(420px, 92vw);
+    padding: 24px 22px;
+    border-radius: 16px;
+    background: rgba(18, 18, 22, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    color: #e9eef7;
+}
+
+/* header */
+.heading {
+    margin: 0 0 14px;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #f5f7ff;
+}
+
+.subtle {
+    margin: 0 0 14px;
+    text-align: center;
+    color: #9aa3ab;
+    font-size: 13px;
+}
+
+/* inputs */
+.joinInput {
+    display: block;
+    width: 100%;
+    border: 1px solid #23252d;
+    background: #13151a;
+    color: #e9eef7;
+    border-radius: 10px;
+    padding: 14px 14px;
+    font-size: 15px;
+    transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.joinInput::placeholder {
+    color: #7d8691;
+}
+
+.joinInput:focus {
+    outline: none;
+    background: #101218;
+    border-color: #2f70ff;
+    box-shadow: 0 0 0 3px rgba(47, 112, 255, 0.15);
+}
+
+.fieldLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #c7d0da;
+    font-size: 13px;
+    margin: 12px 2px 8px;
+}
+
+.inlineRow {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+}
+
+/* buttons */
+.button {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    color: #fff;
+    background: linear-gradient(135deg, #2f70ff, #2957ff);
+    box-shadow: 0 10px 24px rgba(41, 121, 255, .22);
+    transition: transform .06s ease, box-shadow .15s ease, opacity .15s ease;
+}
+
+.button:hover {
+    box-shadow: 0 12px 28px rgba(41, 121, 255, .28);
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+.button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* secondary (alias) */
+.secondaryBtn {
+    width: 100%;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-weight: 600;
+    color: #d9e1ea;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02));
+    border: 1px solid #23252d;
+    transition: background .15s ease, border-color .15s ease, transform .06s ease;
+}
+
+.secondaryBtn:hover {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: #2a2f3a;
+}
+
+.secondaryBtn:active {
+    transform: translateY(1px);
+}
+
+/* helper/error */
+.helper {
+    margin: 8px 2px 0;
+    font-size: 12px;
+    color: #8b94a1;
+}
+
+.error {
+    color: #ff6b7b;
+}
+
+/* footer */
+.footer {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 12px;
+    color: #8b94a1;
+}
+
+/* spacing utils */
+.mt-6 {
+    margin-top: 6px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-14 {
+    margin-top: 14px;
+}
+
+.mt-18 {
+    margin-top: 18px;
+}
+
+/* mobile tweaks */
+@media (max-width: 480px) {
+    .joinInnerContainer {
+        padding: 18px 16px;
+        border-radius: 14px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+}
